@@ -10,7 +10,7 @@ l'objectif de cette étude est d'analyser les différents agrégats économiques
 
 ---
 
-## 🛠️ étapes du projet
+## étapes du projet
 
 ### 1. recherche des données (agrégats économiques et conditions de vie)
 une base de données (`database_contries.csv`) a été constituée pour l'ensemble des pays de la zone euro, couvrant deux grandes catégories de variables :
