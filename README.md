@@ -2,7 +2,7 @@
 
 ce dépôt contient l'analyse approfondie de données socio-économiques visant à explorer la pertinence de l'union monétaire européenne. Ce projet a été développé en Python (avec Pandas, Scikit-Learn et Seaborn) et suit une analyse de données.
 
-## 📌 problématique
+## problématique
 
 **"la zone euro est-elle une zone économique homogène ?"**
 
@@ -45,12 +45,12 @@ les données ont été chargées, nettoyées et structurées dans un DataFrame P
 la première phase analytique a consisté à calculer la moyenne, la médiane et l'écart-type pour chaque indicateur. 
 nous avons également identifié la présence d'outliers (valeurs extrêmes) grâce à des boxplots, nécessitant l'application d'une technique de *capping* (écrêtage) pour normaliser les données avant les étapes suivantes.
 
-![Boxplots - Identification des Outliers](identificando%20outliers%20-%20boxplots.png)
+![Boxplots - Identification des Outliers](imagens/identificando%20outliers%20-%20boxplots.png)
 
 #### B. corrélation simple
 pour comprendre comment les différentes variables économiques interagissent entre elles, nous avons calculé la corrélation de Pearson entre les variables originales et visualisé les résultats à l'aide d'une carte de chaleur (Heatmap).
 
-![Matrice de Corrélation](matriz%20de%20correlação.png)
+![Matrice de Corrélation](imagens/matriz%20de%20correlação.png)
 
 *bbservations clés :* les fortes corrélations (>= 0.7 ou <= -0.7) ont été isolé, notamment entre le PIB par habitant et le salaire médian (positive forte), et entre les dépenses de logement et l'IDH (négative).
 
@@ -58,7 +58,7 @@ pour comprendre comment les différentes variables économiques interagissent en
 pour répondre à la question de l'homogénéité, nous avons appliqué l'algorithme d'apprentissage non supervisé **K-Means**.
 pour déterminer le nombre optimal de groupes ($k$), nous avons utilisé la **Méthode du Coude (Elbow Method)** :
 
-![Méthode du Coude](método%20do%20cotovelo%20-%20clusters.png)
+![Méthode du Coude](imagens/método%20do%20cotovelo%20-%20clusters.png)
 
 l'inflexion claire au niveau $k=3$ nous a conduits à diviser la zone euro en trois profils macroéconomiques bien distincts.
 
@@ -79,13 +79,13 @@ l'algorithme K-Means a révélé la typologie suivante, visualisée par des nuag
 
 #### visualisations des clusters
 
-![Clusters : Richesse vs Qualité de Vie](clusters%20-%20Riqueza%20vs%20Qualidade%20de%20Vida.png)
-![Clusters : Richesse vs Stabilité Économique](clusters%20-%20Riqueza%20vs%20Estabilidade%20Econômica.png)
-![Clusters : Qualité de Vie vs Stabilité](clusters%20-%20Qualidade%20de%20Vida%20vs%20Estabilidade%20Econômica.png)
+![Clusters Richesse vs Qualité de Vie](imagens/clusters%20-%20Riqueza%20vs%20Qualidade%20de%20Vida.png)
+![Clusters Richesse vs Stabilité Économique](imagens/clusters%20-%20Riqueza%20vs%20Estabilidade%20Econômica.png)
+![Clusters Qualité de Vie vs Stabilité](imagens/clusters%20-%20Qualidade%20de%20Vida%20vs%20Estabilidade%20Econômica.png)
 
 ---
 
-## 🎯 question finale et conclusion
+## question finale et conclusion
 
 **"est-il réellement pertinent de regrouper tous ces pays dans une même union monétaire ? Les pays de la zone euro présentent-ils des caractéristiques suffisamment proches pour partager une même monnaie ?"**
 
